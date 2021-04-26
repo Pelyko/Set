@@ -1,0 +1,30 @@
+#start-container{
+    width: 40%;
+    margin: auto;   
+}
+
+#game-container{
+    margin: auto;
+    text-align: center;
+}
+
+.title{
+    text-align: center;
+}
+
+img{
+    height: auto;
+    width: auto;
+}
+
+.game-card{
+    width:80%;
+
+}
+
+#timer{
+    margin: auto;
+    text-align: center;
+}
+
+

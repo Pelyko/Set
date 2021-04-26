@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="paper.css">
+</head>
+<body>
+    <input class="modal-state" id="end-game" type="checkbox">
+    <div class="modal">
+        <div class="modal-body" id="winners">
+            
+        </div>
+    </div>
+    <div id="top-score-div">
+        <h1 class="title">TOPLISTA</h1>
+        <div class="row">
+            <div class="card sm-4 col">
+                <h4 class="title">Egyjátékos mód könnyű fokozat</h4>
+                <div id="one-player-easy" class="card-body">
+
+                </div>
+            </div>
+            <div class="card sm-4 col">
+                <h4 class="title">Egyjátékos mód nehéz fokozat</h4>
+                <div id="one-player-hard" class="card-body">
+                    
+                </div>
+            </div>
+            <div class="card sm-4 col" >
+                <h4 class="title">Többjátékos előző 10 eredménye</h4>
+                <div id="multi-player-ten" class="card-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class ="row" id="game-container">
+    <div class="card sm-2 col" id="helpButtons">
+        <div class="card-body">
+            <div class="row"><button id="find-set">Van-e SET?</button></div>
+            <div class="row"><button id="show-set">Hol van SET?</button></div>
+            <div class="row"><button id="deal-new-cards">Új lap osztása</button></div>
+            <div class="row" id="deck-counter"></div>
+            <div class="row" id="find-set-div"></div>
+        </div>
+    </div>
+    <div class ="card sm-6 col" id="board-container">
+        <div id="board" class="card-body">
+
+        </div>
+    </div>
+    <div class="card sm-4 col" id="player-container">
+        <div class="card-body">
+            <div id="timer" style="display:none">
+            </div>
+            <div id="playersBox">
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="card" id="start-container">
+        <h1 class="title">SET</h1>
+        <div class="card-body" >
+            Játékosok száma:
+            <select id="name-selector">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+            </select>
+            <div id="input-container"></div>
+            <div class="row">
+                <div class="col-3 col">Nehézség:</div>
+                <select id="difficulty-selector">
+                    <option value='easy'>Könnyű (3 tulajdonság)</option>
+                    <option value='hard'>Nehéz (4 tulajdonság)</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-3 col">Játékmód:</div>
+                <select id="mode-selector">
+                    <option value='verseny'>verseny</option>
+                    <option value='gyakorlo'>gyakorlo</option>
+                </select>
+            </div>
+            <div id="more-options">
+            <div class="row">
+                <div class="col-4 col">
+                Van-e SET:
+                <select id="detector-selector">
+                    <option value='nem'>nem</option>
+                    <option value='igen'>igen</option>
+                </select>
+                </div>
+                <div class="col-4 col">
+                Hol van SET:
+                <select id="helper-selector">
+                    <option value='nem'>nem</option>
+                    <option value='igen'>igen</option>
+                </select>
+                </div>
+                <div class="col-4 col">
+                Lap kiegészítés:
+                <select id="extend-selector">
+                    <option value='automatikus'>automatikus</option>
+                    <option value='manualis'>külön gomb</option>
+                </select>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                <div class="sm-4 col"><a href="szabalyok.html"><button>Játékszabályok</button></a></div>
+                <div class="sm-4 col"><input id="start-button" type="button" value="Start"></div>
+                <div class="sm-4 col"><input id="top-score-button" type="button" value="Toplista"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./set.js"></script>
+</body>
+</html>
